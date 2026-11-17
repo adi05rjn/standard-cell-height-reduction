@@ -1,0 +1,16 @@
+# regenerable build output
+*.zam
+*.vproc
+*.vmpd
+*.vwaf
+*.iwaf
+*-Input/
+*-Output/
+__semu_*.py
+*.log
+# scratch
+__pycache__/
+_build_*/
+_check/
+apps/
+cellheight/common/

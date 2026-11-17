@@ -1,0 +1,573 @@
+{
+ "checks": 81,
+ "failed": 0,
+ "results": [
+  {
+   "group": "arithmetic",
+   "what": "6.5T cell height = tracks x 21",
+   "got": 136.5,
+   "want": 136.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "6.5T heights close: 2 x device + N-P gap + border gap",
+   "got": 136.5,
+   "want": 136.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "6.5T border fin gap from cells.py",
+   "got": 43.0,
+   "want": 43.0,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "6.5T N-P fin gap from cells.py",
+   "got": 41.5,
+   "want": 41.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5.5T cell height = tracks x 21",
+   "got": 115.5,
+   "want": 115.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5.5T heights close: 2 x device + N-P gap + border gap",
+   "got": 115.5,
+   "want": 115.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5.5T border fin gap from cells.py",
+   "got": 43.0,
+   "want": 43.0,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5.5T N-P fin gap from cells.py",
+   "got": 20.5,
+   "want": 20.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5.5T N-P contact gap = fin gap - 2 x 5",
+   "got": 10.5,
+   "want": 10.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5.5T border gap beside power tap = border gap / 2 - 5",
+   "got": 16.5,
+   "want": 16.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "4.5T cell height = tracks x 21",
+   "got": 94.5,
+   "want": 94.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "4.5T heights close: 2 x device + N-P gap + border gap",
+   "got": 94.5,
+   "want": 94.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "4.5T border fin gap from cells.py",
+   "got": 44.5,
+   "want": 44.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "4.5T N-P fin gap from cells.py",
+   "got": 40.0,
+   "want": 40.0,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "4.5T N-P contact gap = fin gap - 2 x 5",
+   "got": 30.0,
+   "want": 30.0,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "4.5T border gap beside power tap = border gap / 2 - 5",
+   "got": 17.25,
+   "want": 17.25,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5.0T cell height = tracks x 21",
+   "got": 105.0,
+   "want": 105.0,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5.0T heights close: 2 x device + N-P gap + border gap",
+   "got": 105.0,
+   "want": 105.0,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5.0T border fin gap from cells.py",
+   "got": 58.0,
+   "want": 58.0,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5.0T N-P fin gap from cells.py",
+   "got": 37.0,
+   "want": 37.0,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5T fins two pitches apart: 2 x 21 - 5",
+   "got": 37.0,
+   "want": 37.0,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5T border: three pitches minus fin: 3 x 21 - 5",
+   "got": 58.0,
+   "want": 58.0,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5T rail width = 3 CD = 1.5 x 21",
+   "got": 31.5,
+   "want": 31.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5T fin to rail = border gap / 2 - rail / 2",
+   "got": 13.25,
+   "want": 13.25,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5T contact reach under next track (CuMe)",
+   "got": 13.25,
+   "want": 13.25,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5T contact gap at centre = 37 - 5 - 13.25",
+   "got": 18.75,
+   "want": 18.75,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "5T contact gap at border = 58 - 5 - 13.25",
+   "got": 39.75,
+   "want": 39.75,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "4.5T handshake gap = 2 x 5.25 low-k",
+   "got": 10.5,
+   "want": 10.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_6p5T database unit (nm)",
+   "got": 0.01,
+   "want": 0.01,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_6p5T smallest N-P fin gap on the Fin layer",
+   "got": 41.5,
+   "want": 41.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_6p5T border fin gap on the Fin layer",
+   "got": 43.0,
+   "want": 43.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_6p5T gate length",
+   "got": 16.0,
+   "want": 16.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_6p5T gate pitch",
+   "got": 42.0,
+   "want": 42.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_6p5T gate cut width",
+   "got": 18.0,
+   "want": 18.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_6p5T N-P contact gap, plain column",
+   "got": 31.5,
+   "want": 31.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_6p5T border contact gap, plain column",
+   "got": 33.0,
+   "want": 33.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_6p5T border gap beside power tap",
+   "got": 16.5,
+   "want": 16.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_5p5T database unit (nm)",
+   "got": 0.01,
+   "want": 0.01,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_5p5T smallest N-P fin gap on the Fin layer",
+   "got": 20.5,
+   "want": 20.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_5p5T border fin gap on the Fin layer",
+   "got": 43.0,
+   "want": 43.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_5p5T gate length",
+   "got": 16.0,
+   "want": 16.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_5p5T gate pitch",
+   "got": 42.0,
+   "want": 42.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_5p5T gate cut width",
+   "got": 18.0,
+   "want": 18.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_5p5T N-P contact gap, plain column",
+   "got": 10.5,
+   "want": 10.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_5p5T border contact gap, plain column",
+   "got": 33.0,
+   "want": 33.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_5p5T border gap beside power tap",
+   "got": 16.5,
+   "want": 16.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_4p5T database unit (nm)",
+   "got": 0.01,
+   "want": 0.01,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_4p5T smallest N-P fin gap on the Fin layer",
+   "got": 40.0,
+   "want": 40.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_4p5T border fin gap on the Fin layer",
+   "got": 44.5,
+   "want": 44.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_4p5T gate length",
+   "got": 16.0,
+   "want": 16.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_4p5T gate pitch",
+   "got": 42.0,
+   "want": 42.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_4p5T gate cut width",
+   "got": 18.0,
+   "want": 18.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_4p5T N-P contact gap, plain column",
+   "got": 30.0,
+   "want": 30.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_4p5T border contact gap, plain column",
+   "got": 34.5,
+   "want": 34.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "cell_4p5T border gap beside power tap",
+   "got": 17.25,
+   "want": 17.25,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "bpr_5T N-P fin gap",
+   "got": 37.0,
+   "want": 37.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "bpr_5T border fin gap",
+   "got": 58.0,
+   "want": 58.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "bpr_5T gate pitch",
+   "got": 45.0,
+   "want": 45.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "bpr_5T rail width",
+   "got": 31.5,
+   "want": 31.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "bpr_5T fin to rail",
+   "got": 13.25,
+   "want": 13.25,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "bpr_5T contact gap at cell centre, signal column",
+   "got": 18.75,
+   "want": 18.75,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "bpr_5T contact gap at cell border, signal column",
+   "got": 39.75,
+   "want": 39.75,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "bpr_5T power contacts merged at borders: only centre gaps remain",
+   "got": 18.75,
+   "want": 18.75,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "bpr_5T rail via inset from rail edge",
+   "got": 5.0,
+   "want": 5.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "handshake N wing starts where the N cavity ends",
+   "got": 0.0,
+   "want": 0.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "handshake N wing ends where the P cavity starts",
+   "got": 0.0,
+   "want": 0.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "handshake P wing spans from N cavity to P cavity",
+   "got": 0.0,
+   "want": 0.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "handshake cavity reaches 10.25 nm past the fin (5 + 5.25)",
+   "got": 10.25,
+   "want": 10.25,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "handshake metal tip gap implied: 2 x 5.25 low-k",
+   "got": 10.5,
+   "want": 10.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "handshake bridge width (half the metal pitch)",
+   "got": 10.5,
+   "want": 10.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "handshake bridge centred on the cell",
+   "got": 47.25,
+   "want": 47.25,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "nanosheet heights close: 2 x 11 + 40 + 32.5",
+   "got": 94.5,
+   "want": 94.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "nanosheet border sheet gap from cells.py",
+   "got": 32.5,
+   "want": 32.5,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "nanosheet N-P contact gap = 40 - 2 x 5",
+   "got": 30.0,
+   "want": 30.0,
+   "ok": true
+  },
+  {
+   "group": "arithmetic",
+   "what": "nanosheet plain border contact gap = 32.5 - 2 x 5",
+   "got": 22.5,
+   "want": 22.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "nanosheet sheet width",
+   "got": 11.0,
+   "want": 11.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "nanosheet N-P sheet gap",
+   "got": 40.0,
+   "want": 40.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "nanosheet border sheet gap",
+   "got": 32.5,
+   "want": 32.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "nanosheet N-P contact gap",
+   "got": 30.0,
+   "want": 30.0,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "nanosheet border contact gap, plain column",
+   "got": 22.5,
+   "want": 22.5,
+   "ok": true
+  },
+  {
+   "group": "layout",
+   "what": "nanosheet border gap beside power tap (paper 10.5)",
+   "got": 10.5,
+   "want": 10.5,
+   "ok": true
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+BB                          1     0
+FinAll                      2     0
+Gate                        3     0
+GateCut                     4     0
+DeepN                       5     0
+WingN                       6     0
+OpenN                       7     0
+SpDeepN                     8     0
+SpWingN                     9     0
+DeepP                       10    0
+WingP                       11    0
+OpenP                       12    0
+SpDeepP                     13    0
+SpWingP                     14    0
+Bridge                      15    0
+BridgeVia                   16    0

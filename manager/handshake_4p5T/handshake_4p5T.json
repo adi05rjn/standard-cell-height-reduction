@@ -1,0 +1,560 @@
+{
+ "process": [
+  {
+   "stepType": "WaferSetup",
+   "stepName": "Wafer setup",
+   "wafer": "Wafer1",
+   "material": "/Silicon/Si_Xtal",
+   "thickness": "150"
+  },
+  {
+   "stepType": "Sequence",
+   "stepName": "Fins and STI",
+   "children": [
+    {
+     "stepType": "Deposit",
+     "stepName": "Hard mask nitride",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Nitrides/Si3N4_LPCVD",
+     "thickness": "25.0"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "Fin etch",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Nitrides/Si3N4_LPCVD,/Silicon/Si_Xtal",
+     "selectivity": false,
+     "depth": "125.0",
+     "advanced": true,
+     "mask.name": "FinAll",
+     "mask.polarity": true
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "STI fill",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Oxides/SiO2_HDP",
+     "thickness": "90"
+    },
+    {
+     "stepType": "Polish",
+     "stepName": "STI CMP",
+     "wafer": "Wafer1",
+     "type": "stopOnMaterial",
+     "type.stopOnMaterial.materials": "/Nitrides/Si3N4_LPCVD",
+     "type.stopOnMaterial.overpolish": "0"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "STI recess",
+     "wafer": "Wafer1",
+     "type": "basic",
+     "materials": "/Oxides/SiO2_HDP",
+     "selectivity": false,
+     "depth": "70.0"
+    },
+    {
+     "stepType": "RemoveMaterials",
+     "stepName": "Strip hard mask",
+     "wafer": "Wafer1",
+     "materials": "/Nitrides/Si3N4_LPCVD"
+    }
+   ]
+  },
+  {
+   "stepType": "Sequence",
+   "stepName": "Dummy gate",
+   "children": [
+    {
+     "stepType": "Deposit",
+     "stepName": "Dummy gate poly",
+     "wafer": "Wafer1",
+     "type": "planarizing",
+     "material": "/Silicon/Si_Amorph",
+     "thickness": "60.0"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "Gate cap",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "material": "/Nitrides/Si3N4_LPCVD",
+     "thickness": "20.0"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "Gate etch",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Nitrides/Si3N4_LPCVD,/Silicon/Si_Amorph",
+     "selectivity": false,
+     "depth": "130.0",
+     "advanced": true,
+     "mask.name": "Gate",
+     "mask.polarity": true
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "Gate cut",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Nitrides/Si3N4_LPCVD,/Silicon/Si_Amorph",
+     "selectivity": false,
+     "depth": "130.0",
+     "advanced": true,
+     "mask.name": "GateCut",
+     "mask.polarity": false
+    }
+   ]
+  },
+  {
+   "stepType": "Sequence",
+   "stepName": "Spacer kept over fins and ILD",
+   "children": [
+    {
+     "stepType": "Deposit",
+     "stepName": "Nitride spacer (kept over fins)",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Nitrides/Si3N4_LPCVD",
+     "thickness": "6.0"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "ILD0",
+     "wafer": "Wafer1",
+     "type": "planarizing",
+     "material": "/Oxides/SiO2_TEOS",
+     "thickness": "40"
+    },
+    {
+     "stepType": "Polish",
+     "stepName": "ILD CMP to nitride",
+     "wafer": "Wafer1",
+     "type": "stopOnMaterial",
+     "type.stopOnMaterial.materials": "/Nitrides/Si3N4_LPCVD",
+     "type.stopOnMaterial.overpolish": "0"
+    }
+   ]
+  },
+  {
+   "stepType": "Sequence",
+   "stepName": "N contact module",
+   "children": [
+    {
+     "stepType": "Etch",
+     "stepName": "N contact deep etch",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Oxides/SiO2_TEOS",
+     "selectivity": false,
+     "depth": "300",
+     "advanced": true,
+     "mask.name": "DeepN",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "N contact shallow etch (staircase)",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Oxides/SiO2_TEOS",
+     "selectivity": false,
+     "depth": "71.0",
+     "advanced": true,
+     "mask.name": "WingN",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "N fin open (nitride)",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Nitrides/Si3N4_LPCVD",
+     "selectivity": false,
+     "depth": "300",
+     "advanced": true,
+     "mask.name": "OpenN",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Growth",
+     "stepName": "N epi",
+     "wafer": "Wafer1",
+     "type": "selectiveEpitaxy",
+     "material": "/Silicon/SiC",
+     "thickness": "8.0",
+     "type.selectiveEpitaxy.targetMaterials": "/Silicon/Si_Xtal"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "N nitride spacer strip (deep)",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Nitrides/Si3N4_LPCVD",
+     "selectivity": false,
+     "depth": "300",
+     "advanced": true,
+     "mask.name": "SpDeepN",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "N nitride spacer strip (wing)",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Nitrides/Si3N4_LPCVD",
+     "selectivity": false,
+     "depth": "71.0",
+     "advanced": true,
+     "mask.name": "SpWingN",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "N low-k spacer deposit",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Oxides/SiO2_SiCOH",
+     "thickness": "5.25"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "N low-k spacer etch-back",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Oxides/SiO2_SiCOH",
+     "selectivity": false,
+     "depth": "7.25"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "N contact liner",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Metals/Ti",
+     "thickness": "2"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "N contact W",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Metals/W",
+     "thickness": "10"
+    },
+    {
+     "stepType": "Polish",
+     "stepName": "N contact CMP",
+     "wafer": "Wafer1",
+     "type": "stopOnMaterial",
+     "type.stopOnMaterial.materials": "/Oxides/SiO2_TEOS,/Nitrides/Si3N4_LPCVD",
+     "type.stopOnMaterial.overpolish": "0"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "N contact recess",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Metals/W,/Metals/Ti",
+     "selectivity": false,
+     "depth": "51.0"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "N contact cap",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Nitrides/Si3N4_PECVD",
+     "thickness": "10"
+    },
+    {
+     "stepType": "Polish",
+     "stepName": "N contact cap CMP",
+     "wafer": "Wafer1",
+     "type": "stopOnMaterial",
+     "type.stopOnMaterial.materials": "/Oxides/SiO2_TEOS,/Nitrides/Si3N4_LPCVD",
+     "type.stopOnMaterial.overpolish": "0"
+    }
+   ]
+  },
+  {
+   "stepType": "Sequence",
+   "stepName": "P contact module",
+   "children": [
+    {
+     "stepType": "Etch",
+     "stepName": "P contact deep etch",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Oxides/SiO2_TEOS",
+     "selectivity": false,
+     "depth": "300",
+     "advanced": true,
+     "mask.name": "DeepP",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "P contact shallow etch (staircase)",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Oxides/SiO2_TEOS",
+     "selectivity": false,
+     "depth": "71.0",
+     "advanced": true,
+     "mask.name": "WingP",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "P fin open (nitride)",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Nitrides/Si3N4_LPCVD",
+     "selectivity": false,
+     "depth": "300",
+     "advanced": true,
+     "mask.name": "OpenP",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Growth",
+     "stepName": "P epi",
+     "wafer": "Wafer1",
+     "type": "selectiveEpitaxy",
+     "material": "/Silicon/SiGe",
+     "thickness": "8.0",
+     "type.selectiveEpitaxy.targetMaterials": "/Silicon/Si_Xtal"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "P nitride spacer strip (deep)",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Nitrides/Si3N4_LPCVD",
+     "selectivity": false,
+     "depth": "300",
+     "advanced": true,
+     "mask.name": "SpDeepP",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "P nitride spacer strip (wing)",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Nitrides/Si3N4_LPCVD",
+     "selectivity": false,
+     "depth": "71.0",
+     "advanced": true,
+     "mask.name": "SpWingP",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "P low-k spacer deposit",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Oxides/SiO2_SiCOH",
+     "thickness": "5.25"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "P low-k spacer etch-back",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Oxides/SiO2_SiCOH",
+     "selectivity": false,
+     "depth": "7.25"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "P contact liner",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Metals/Ti",
+     "thickness": "2"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "P contact W",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Metals/W",
+     "thickness": "10"
+    },
+    {
+     "stepType": "Polish",
+     "stepName": "P contact CMP",
+     "wafer": "Wafer1",
+     "type": "stopOnMaterial",
+     "type.stopOnMaterial.materials": "/Oxides/SiO2_TEOS,/Nitrides/Si3N4_LPCVD",
+     "type.stopOnMaterial.overpolish": "0"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "P contact recess",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Metals/W,/Metals/Ti",
+     "selectivity": false,
+     "depth": "51.0"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "P contact cap",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Nitrides/Si3N4_PECVD",
+     "thickness": "10"
+    },
+    {
+     "stepType": "Polish",
+     "stepName": "P contact cap CMP",
+     "wafer": "Wafer1",
+     "type": "stopOnMaterial",
+     "type.stopOnMaterial.materials": "/Oxides/SiO2_TEOS,/Nitrides/Si3N4_LPCVD",
+     "type.stopOnMaterial.overpolish": "0"
+    }
+   ]
+  },
+  {
+   "stepType": "Sequence",
+   "stepName": "Replacement metal gate",
+   "children": [
+    {
+     "stepType": "Polish",
+     "stepName": "Poly-open CMP",
+     "wafer": "Wafer1",
+     "type": "stopOnMaterial",
+     "type.stopOnMaterial.materials": "/Silicon/Si_Amorph",
+     "type.stopOnMaterial.overpolish": "0"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "Dummy gate removal",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Silicon/Si_Amorph",
+     "selectivity": false,
+     "depth": "300"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "High-k",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Oxides/HfOx",
+     "thickness": "2"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "Work function",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Metals/TiN",
+     "thickness": "3"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "Gate W",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Metals/W",
+     "thickness": "8"
+    },
+    {
+     "stepType": "Polish",
+     "stepName": "RMG CMP",
+     "wafer": "Wafer1",
+     "type": "stopOnMaterial",
+     "type.stopOnMaterial.materials": "/Oxides/SiO2_TEOS",
+     "type.stopOnMaterial.overpolish": "0"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "Gate recess",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Metals/W,/Metals/TiN,/Oxides/HfOx",
+     "selectivity": false,
+     "depth": "25"
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "SAC cap",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Nitrides/Si3N4_LPCVD",
+     "thickness": "14"
+    },
+    {
+     "stepType": "Polish",
+     "stepName": "SAC cap CMP",
+     "wafer": "Wafer1",
+     "type": "stopOnMaterial",
+     "type.stopOnMaterial.materials": "/Oxides/SiO2_TEOS",
+     "type.stopOnMaterial.overpolish": "0"
+    }
+   ]
+  },
+  {
+   "stepType": "Sequence",
+   "stepName": "Mid-track handshake bridge",
+   "children": [
+    {
+     "stepType": "Deposit",
+     "stepName": "Bridge dielectric",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "material": "/Oxides/SiO2_TEOS",
+     "thickness": "20.0"
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "Bridge trench etch",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Oxides/SiO2_TEOS",
+     "selectivity": false,
+     "depth": "20.0",
+     "advanced": true,
+     "mask.name": "Bridge",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Etch",
+     "stepName": "Via etch through contact caps",
+     "wafer": "Wafer1",
+     "type": "straight",
+     "materials": "/Nitrides/Si3N4_PECVD",
+     "selectivity": false,
+     "depth": "60",
+     "advanced": true,
+     "mask.name": "BridgeVia",
+     "mask.polarity": false
+    },
+    {
+     "stepType": "Deposit",
+     "stepName": "Bridge metal (Co)",
+     "wafer": "Wafer1",
+     "type": "conformal",
+     "material": "/Metals/Co",
+     "thickness": "8"
+    },
+    {
+     "stepType": "Polish",
+     "stepName": "Bridge CMP",
+     "wafer": "Wafer1",
+     "type": "stopOnMaterial",
+     "type.stopOnMaterial.materials": "/Oxides/SiO2_TEOS",
+     "type.stopOnMaterial.overpolish": "0"
+    }
+   ]
+  }
+ ]
+}

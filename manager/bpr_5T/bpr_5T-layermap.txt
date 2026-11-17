@@ -1,0 +1,10 @@
+BB                          1     0
+FinAll                      2     0
+BPR                         3     0
+Gate                        4     0
+GateCut                     5     0
+SD                          6     0
+NBlock                      7     0
+PBlock                      8     0
+Contact                     9     0
+VBPR                        10    0
